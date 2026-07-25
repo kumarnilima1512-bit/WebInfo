@@ -4,12 +4,19 @@ import UserInput from "~/components/UserInput.vue";
 import ReportCard from "~/components/ReportCard.vue";
 
 useHead({
-  title: "Digital Heroes | Website Scanner",
+  title: "WebInfo | Website Health Checker",
   meta: [
     {
       name: "description",
       content:
         "Instantly analyze any website — HTTP status, response time, SEO meta info, missing alt tags, word count and more.",
+    },
+  ],
+  link: [
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/images/logo.png",
     },
   ],
 });
