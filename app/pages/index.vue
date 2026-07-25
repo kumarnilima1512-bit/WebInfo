@@ -111,7 +111,7 @@ async function handleAnalyze(payload: { valid: boolean; url: string }) {
 
     <!-- ===== Navbar ===== -->
     <header class="relative z-10 flex items-center justify-between px-6 py-5 sm:px-10">
-      <div class="flex items-center gap-3">
+      <NuxtLink to="/" class="flex items-center gap-3">
         <div class="flex h-18 w-18 items-center justify-center overflow-hidden rounded-xl">
           <img
               src="/images/logo.png"
@@ -122,12 +122,12 @@ async function handleAnalyze(payload: { valid: boolean; url: string }) {
         <span class="text-lg font-bold tracking-tight text-white sm:text-xl">
           Web <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Info</span>
         </span>
-      </div>
+      </NuxtLink>
 
       <nav class="hidden items-center gap-8 text-sm font-medium text-slate-300 sm:flex">
-        <a href="#" class="transition hover:text-white">Home</a>
-        <a href="#" class="transition hover:text-white">About</a>
-        <a href="#" class="transition hover:text-white">Contact</a>
+        <NuxtLink to="/" class="text-white transition hover:text-white">Home</NuxtLink>
+        <NuxtLink to="/about" class="transition hover:text-white">About</NuxtLink>
+        <NuxtLink to="/contact" class="transition hover:text-white">Contact</NuxtLink>
       </nav>
     </header>
 
@@ -153,7 +153,7 @@ async function handleAnalyze(payload: { valid: boolean; url: string }) {
           SEO meta info, missing alt tags, and approximate word count.
         </p>
 
-        <!-- Placeholder for URL Input (will be made functional in the next step) -->
+        <!-- URL Input -->
         <div class="mt-10 w-full max-w-xl">
             <UserInput
                 v-model="url"
@@ -228,7 +228,7 @@ async function handleAnalyze(payload: { valid: boolean; url: string }) {
         </div>
       </div>
     </main>
-        <!-- Website Report Placeholder -->
+        <!-- Website Report -->
     <ReportCard :result="result" />
 
 
