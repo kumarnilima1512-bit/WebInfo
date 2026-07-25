@@ -110,26 +110,7 @@ async function handleAnalyze(payload: { valid: boolean; url: string }) {
     </div>
 
     <!-- ===== Navbar ===== -->
-    <header class="relative z-10 flex items-center justify-between px-6 py-5 sm:px-10">
-      <NuxtLink to="/" class="flex items-center gap-3">
-        <div class="flex h-18 w-18 items-center justify-center overflow-hidden rounded-xl">
-          <img
-              src="/images/logo.png"
-              alt="WebInfo Logo"
-              class="h-16 w-16 object-contain"
-            />
-          </div>
-        <span class="text-lg font-bold tracking-tight text-white sm:text-xl">
-          Web <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Info</span>
-        </span>
-      </NuxtLink>
-
-      <nav class="hidden items-center gap-8 text-sm font-medium text-slate-300 sm:flex">
-        <NuxtLink to="/" class="text-white transition hover:text-white">Home</NuxtLink>
-        <NuxtLink to="/about" class="transition hover:text-white">About</NuxtLink>
-        <NuxtLink to="/contact" class="transition hover:text-white">Contact</NuxtLink>
-      </nav>
-    </header>
+    <AppHeader />
 
     <!-- ===== Hero Section ===== -->
     <main class="relative z-10 mx-auto flex max-w-7xl flex-col items-center gap-14 px-6 pt-14 pb-24 sm:pt-20 lg:flex-row lg:items-center lg:justify-between lg:gap-10">

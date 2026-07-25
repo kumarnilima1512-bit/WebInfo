@@ -85,22 +85,8 @@ const stats = [
       <span class="tech-symbol symbol-6">λ</span>
     </div>
 
-    <header class="relative z-10 flex items-center justify-between px-6 py-5 sm:px-10">
-      <NuxtLink to="/" class="flex items-center gap-3">
-        <div class="flex h-18 w-18 items-center justify-center overflow-hidden rounded-xl">
-          <img src="/images/logo.png" alt="WebInfo Logo" class="h-16 w-16 object-contain" />
-        </div>
-        <span class="text-lg font-bold tracking-tight text-white sm:text-xl">
-          Web <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Info</span>
-        </span>
-      </NuxtLink>
-
-      <nav class="hidden items-center gap-8 text-sm font-medium text-slate-300 sm:flex">
-        <NuxtLink to="/" class="transition hover:text-white">Home</NuxtLink>
-        <NuxtLink to="/about" class="text-white transition hover:text-white">About</NuxtLink>
-        <NuxtLink to="/contact" class="transition hover:text-white">Contact</NuxtLink>
-      </nav>
-    </header>
+    <!-- ===== Navbar ===== -->
+    <AppHeader />
 
     <main class="relative z-10 mx-auto max-w-5xl px-6 pt-14 pb-24 sm:pt-20">
       <div class="text-center">
@@ -150,24 +136,20 @@ const stats = [
               class="icon-glow flex h-12 w-12 items-center justify-center rounded-xl border-2"
               :class="`icon-${feature.color}`"
             >
-              <!-- Bolt / Instant Analysis -->
               <svg v-if="feature.icon === 'bolt'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4.5 14h6l-1 8L19.5 10h-6l0.5-8z" />
               </svg>
 
-              <!-- Search / SEO Insights -->
               <svg v-else-if="feature.icon === 'search'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <circle cx="10.5" cy="10.5" r="6.5" />
                 <path stroke-linecap="round" d="M20 20l-4.5-4.5" />
               </svg>
 
-              <!-- Accessibility -->
               <svg v-else-if="feature.icon === 'accessibility'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="4.5" r="1.75" fill="currentColor" stroke="none" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 8.5h14M12 8.5v5m0 0l-3.5 8M12 13.5l3.5 8M8 11.5l4 1.2 4-1.2" />
               </svg>
 
-              <!-- Bar Chart / Performance -->
               <svg v-else-if="feature.icon === 'chart'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 20V10m6 10V4m6 16v-7" />
               </svg>
@@ -272,12 +254,10 @@ const stats = [
   50% { transform: translateY(-30px) rotate(8deg); }
 }
 
-/* ===== Feature Card Hover ===== */
 .feature-card:hover {
   box-shadow: 0 0 30px -10px rgba(99, 102, 241, 0.4);
 }
 
-/* ===== Neon Icon Styles ===== */
 .icon-glow {
   transition: all 0.3s ease;
 }
