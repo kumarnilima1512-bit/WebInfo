@@ -105,11 +105,15 @@ async function handleAnalyze(payload: { valid: boolean; url: string }) {
     <!-- ===== Navbar ===== -->
     <header class="relative z-10 flex items-center justify-between px-6 py-5 sm:px-10">
       <div class="flex items-center gap-3">
-        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 font-bold text-white shadow-lg shadow-indigo-500/40">
-          DH
-        </div>
+        <div class="flex h-18 w-18 items-center justify-center overflow-hidden rounded-xl">
+          <img
+              src="/images/logo.png"
+              alt="WebInfo Logo"
+              class="h-16 w-16 object-contain"
+            />
+          </div>
         <span class="text-lg font-bold tracking-tight text-white sm:text-xl">
-          Digital <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Heroes</span>
+          Web <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Info</span>
         </span>
       </div>
 
