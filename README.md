@@ -1,75 +1,47 @@
-# Nuxt Minimal Starter
+# 🌐 WebInfo
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+WebInfo is a modern website health checker built with Nuxt that analyzes websites for SEO, performance, and technical health.
 
-## Setup
+## ✨ Features
 
-Make sure to install dependencies:
+- 🔍 HTTP Status Checker
+- ⚡ Response Time Analysis
+- 📝 Page Title Detection
+- 📄 Meta Description Analysis
+- 🏷️ H1 Tag Detection
+- 🖼️ Missing Alt Image Detection
+- 📊 Word Count Analysis
+- 📈 Website Health Report Dashboard
+
+## 🛠 Tech Stack
+
+- Nuxt 4
+- Vue 3
+- Tailwind CSS
+- TypeScript
+- Nitro Server
+
+## 🚀 Installation
 
 ```bash
-# npm
+git clone https://github.com/kumarnilima1512-bit/WebInfo.git
+
+cd WebInfo
+
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## 📌 Roadmap
 
-Build the application for production:
+- Lighthouse-style Health Score
+- AI-powered SEO Suggestions
+- PDF Report Export
+- Broken Link Checker
+- Sitemap & Robots.txt Analysis
+- Accessibility Audit
 
-```bash
-# npm
-npm run build
+## 📄 License
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+MIT
