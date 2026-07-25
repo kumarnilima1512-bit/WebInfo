@@ -21,22 +21,26 @@ const features = [
   {
     title: "Instant Analysis",
     description: "Get a complete website health report in seconds — no signup, no waiting.",
-    icon: "⚡",
+    icon: "bolt",
+    color: "indigo",
   },
   {
     title: "SEO Insights",
     description: "Check meta title, meta description, heading structure, and content depth.",
-    icon: "🔍",
+    icon: "search",
+    color: "cyan",
   },
   {
     title: "Accessibility Check",
     description: "Find images missing alt attributes to improve accessibility and SEO ranking.",
-    icon: "♿",
+    icon: "accessibility",
+    color: "emerald",
   },
   {
     title: "Performance Metrics",
     description: "Measure real response time and HTTP status to catch issues early.",
-    icon: "📊",
+    icon: "chart",
+    color: "purple",
   },
 ];
 
@@ -137,10 +141,38 @@ const stats = [
         </p>
 
         <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          <div v-for="feature in features" :key="feature.title" class="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-indigo-400/40 hover:bg-white/10">
-            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 text-2xl">
-              {{ feature.icon }}
-            </div>
+          <div
+            v-for="feature in features"
+            :key="feature.title"
+            class="feature-card group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-indigo-400/40 hover:bg-white/10"
+          >
+            <span
+              class="icon-glow flex h-12 w-12 items-center justify-center rounded-xl border-2"
+              :class="`icon-${feature.color}`"
+            >
+              <!-- Bolt / Instant Analysis -->
+              <svg v-if="feature.icon === 'bolt'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4.5 14h6l-1 8L19.5 10h-6l0.5-8z" />
+              </svg>
+
+              <!-- Search / SEO Insights -->
+              <svg v-else-if="feature.icon === 'search'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <circle cx="10.5" cy="10.5" r="6.5" />
+                <path stroke-linecap="round" d="M20 20l-4.5-4.5" />
+              </svg>
+
+              <!-- Accessibility -->
+              <svg v-else-if="feature.icon === 'accessibility'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="4.5" r="1.75" fill="currentColor" stroke="none" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 8.5h14M12 8.5v5m0 0l-3.5 8M12 13.5l3.5 8M8 11.5l4 1.2 4-1.2" />
+              </svg>
+
+              <!-- Bar Chart / Performance -->
+              <svg v-else-if="feature.icon === 'chart'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 20V10m6 10V4m6 16v-7" />
+              </svg>
+            </span>
+
             <h3 class="mt-4 text-lg font-semibold text-white">{{ feature.title }}</h3>
             <p class="mt-2 text-sm text-slate-400">{{ feature.description }}</p>
           </div>
@@ -238,5 +270,63 @@ const stats = [
 @keyframes floatSymbol {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-30px) rotate(8deg); }
+}
+
+/* ===== Feature Card Hover ===== */
+.feature-card:hover {
+  box-shadow: 0 0 30px -10px rgba(99, 102, 241, 0.4);
+}
+
+/* ===== Neon Icon Styles ===== */
+.icon-glow {
+  transition: all 0.3s ease;
+}
+
+.icon-indigo {
+  color: #818cf8;
+  border-color: rgba(129, 140, 248, 0.4);
+  background: rgba(129, 140, 248, 0.08);
+  filter: drop-shadow(0 0 6px rgba(129, 140, 248, 0.6));
+}
+
+.feature-card:hover .icon-indigo {
+  border-color: #818cf8;
+  box-shadow: 0 0 18px 2px rgba(129, 140, 248, 0.6);
+}
+
+.icon-cyan {
+  color: #22d3ee;
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.08);
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.6));
+}
+
+.feature-card:hover .icon-cyan {
+  border-color: #22d3ee;
+  box-shadow: 0 0 18px 2px rgba(34, 211, 238, 0.6);
+}
+
+.icon-emerald {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.08);
+  filter: drop-shadow(0 0 6px rgba(52, 211, 153, 0.6));
+}
+
+.feature-card:hover .icon-emerald {
+  border-color: #34d399;
+  box-shadow: 0 0 18px 2px rgba(52, 211, 153, 0.6);
+}
+
+.icon-purple {
+  color: #c084fc;
+  border-color: rgba(192, 132, 252, 0.4);
+  background: rgba(192, 132, 252, 0.08);
+  filter: drop-shadow(0 0 6px rgba(192, 132, 252, 0.6));
+}
+
+.feature-card:hover .icon-purple {
+  border-color: #c084fc;
+  box-shadow: 0 0 18px 2px rgba(192, 132, 252, 0.6);
 }
 </style>
