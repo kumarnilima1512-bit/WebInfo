@@ -89,23 +89,23 @@ POST /api/audit
 {
   "success": true,
   "status": 200,
-  "responseTime": 325,
+  "responseTime": 31,
   "title": "Example Domain",
   "metaDescription": "Example website description",
   "h1Count": 1,
   "missingAltImages": 0,
-  "wordCount": 512
+  "wordCount": 17
 }
 ```
 
 ### Error Responses
 
-| Status Code | Description |
-|-------------|-------------|
-| 400 | Invalid or missing URL |
-| 400 | URL does not contain an HTML page |
-| 408 | Request timed out |
-| 500 | Internal server error |
+| Status Code | Description                       |
+|-------------|-----------------------------------|
+| 400         | Invalid or missing URL            |
+| 400         | URL does not contain an HTML page |
+| 408         | Request timed out                 |
+| 500         | Internal server error             |
 
 ---
 
@@ -159,13 +159,7 @@ https://github.com/kumarnilima1512-bit/WebInfo
 
 ### Live Demo
 
-Replace this with your deployed application URL.
-
-Example:
-
-```text
-https://your-project.vercel.app
-```
+The live demo is available at the following: https://web-info-sage.vercel.app/
 
 ---
 
