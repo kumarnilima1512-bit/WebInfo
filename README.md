@@ -109,6 +109,20 @@ POST /api/audit
 
 ---
 
+
+## 🧪 Running Tests
+
+Run the parser unit tests using:
+
+```bash
+npm test
+```
+
+The project uses **Vitest** to verify the HTML parsing logic.
+
+---
+
+
 # 🧠 Design Decisions
 
 ### 1. Nuxt + Nitro
